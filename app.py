@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 import random_anime as r_anime
 
 #initialization
@@ -10,9 +10,8 @@ app.config.update(
 
 # controllers
 @app.route("/")
-
 def random_anime():
-    return "Go watch " + r_anime.pick_random()
+    return render_template("index.html", anime_sent="Go watch " + r_anime.pick_random())
 
 # launch
 if __name__ == "__main__":
