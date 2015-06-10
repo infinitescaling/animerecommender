@@ -12,7 +12,7 @@ app.config.update(
 @app.route("/")
 
 def random_anime():
-    return r_anime.pick_random()
+    return "Go watch " + r_anime.pick_random()
 
 # launch
 if __name__ == "__main__":
