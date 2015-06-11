@@ -11,7 +11,8 @@ app.config.update(
 # controllers
 @app.route("/")
 def random_anime():
-    return render_template("index.html", anime_sent="Go watch " + r_anime.pick_random())
+    anime_title = r_anime.pick_random()
+    return render_template("index.html", anime_sent="Go watch " + anime_title, description=r_anime.get_summary(anime_title))
 
 # launch
 if __name__ == "__main__":
