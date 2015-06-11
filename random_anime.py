@@ -20,7 +20,7 @@ def getXML():
 def pick_random():
     getXML()
     match = re.findall('>([^"<"]+)</anime>', anime_xml)
-    match = [s.encode('utf8','ignore') for s in match]
+    match = [s.encode('ascii','ignore') for s in match]
     match = [s.replace('&amp;', '&') for s in match]
     return random.choice(match)
     
