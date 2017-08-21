@@ -34,7 +34,7 @@ def get_summary(anime_title):
     match = re.findall(reg_expression, anime_xml)
     if not match:
         return get_summary(pick_random())
-    request = requests.get("http://www.animenewsnetwork.com"+match[0])
+    request = requests.get("http://www.animenewsnetwork.cc"+match[0])
     anime_info = request.text
     reg_expression = "<strong>Plot Summary:</strong> \n\t<span>([^<]+)</span>"
     match = re.findall(reg_expression, anime_info)
