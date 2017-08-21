@@ -9,7 +9,7 @@ anime_xml = ""
 
 def getXML():
     global anime_xml
-    url = 'http://www.animenewsnetwork.com/encyclopedia/reports.xml?id=172&nlist=100&nskip=0'
+    url = 'http://www.animenewsnetwork.cc/encyclopedia/reports.xml?id=172&nlist=100&nskip=0'
     request = requests.get(url)
     if request.status_code == 200:
         #print "Successfully downloaded XML"
